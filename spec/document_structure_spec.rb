@@ -16,7 +16,6 @@ RSpec.describe "Well-Formed HTML Document" do
     expect(body.name).to eq('body')
 
     expect(html_file_contents).to include('</body>')
-
     validator = W3CValidators::NuValidator.new
     html = File.read('./index.html')
     results = validator.validate_text(html)
